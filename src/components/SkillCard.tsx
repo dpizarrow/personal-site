@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { useTheme } from "next-themes"; // Import useTheme
+import { useTheme } from "next-themes";
 
 // Define a type for sub-skill
 interface SubSkill {
@@ -29,7 +29,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
 
   return (
     <div
-      className={`flex flex-col items-center rounded-lg shadow-md p-4 border-2 ${borderStyle}`}
+      className={`flex flex-col items-center rounded-lg shadow-md p-4 w-full md:w-64 border-2 ${borderStyle}`}
     >
       <Image
         src={svgPath}
