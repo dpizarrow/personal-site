@@ -14,6 +14,7 @@ import Postgres from "@/assets/svg/postgresql.svg";
 import Docker from "@/assets/svg/docker.svg";
 import Language from "@/assets/svg/language.svg";
 import Git from "@/assets/svg/git.svg";
+import Planetscale from "@/assets/svg/planetscale.svg";
 
 interface SubSkill {
   name: string;
@@ -66,6 +67,10 @@ const categories = {
     {
       name: "Vercel",
       svg: Vercel,
+    },
+    {
+      name: "PlanetScale",
+      svg: Planetscale,
     },
   ],
   databases: [
