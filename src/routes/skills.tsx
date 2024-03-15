@@ -93,7 +93,7 @@ const categories = {
       svg: Language,
     },
   ],
-  other: [
+  tools: [
     {
       name: "Git",
       svg: Git,
@@ -120,7 +120,7 @@ const Skills: React.FC = () => {
         <div>
           <Section title="Databases" skills={categories.databases} />
           <Section title="Languages" skills={categories.languages} />
-          <Section title="Other" skills={categories.other} />
+          <Section title="Tools" skills={categories.tools} />
         </div>
       </div>
     </div>

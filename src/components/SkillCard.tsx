@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/components/theme-provider";
 
 // Define a type for sub-skill
 interface SubSkill {
@@ -22,7 +19,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
   svgPath,
   subSkills,
 }) => {
-  const { theme } = useTheme(); // Use the useTheme hook
+  const { theme } = useTheme();
 
   // Determine border style based on theme
   const borderStyle = theme === "dark" ? "border-gray-300" : "border-gray-700";
@@ -31,11 +28,11 @@ const SkillCard: React.FC<SkillCardProps> = ({
     <div
       className={`flex flex-col items-center rounded-lg shadow-md p-4 w-full md:w-64 border-2 ${borderStyle}`}
     >
-      <Image
+      <img
         src={svgPath}
         alt={skillName}
-        width={48} // Set width
-        height={48} // Set height
+        width={48}
+        height={48}
         className="dark:filter dark:invert"
       />
       <h2 className="mt-2 text-lg font-semibold">{skillName}</h2>
@@ -43,11 +40,11 @@ const SkillCard: React.FC<SkillCardProps> = ({
         <div className="mt-4">
           {subSkills.map((subSkill, index) => (
             <div key={index} className="mt-2 flex items-center">
-              <Image
+              <img
                 src={subSkill.svg}
                 alt={subSkill.name}
-                width={24} // Set width for sub-skill images
-                height={24} // Set height for sub-skill images
+                width={24}
+                height={24}
                 className="dark:filter dark:invert"
               />
               <span className="ml-2 text-sm">{subSkill.name}</span>

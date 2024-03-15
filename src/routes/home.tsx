@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -19,15 +19,15 @@ export default function Home() {
         {" "}
         {/* Button 1 */}
         <Button className="px-4 py-2 rounded" variant="outline">
-          <Link href="/about">About</Link>
+          <Link to="/about">About</Link>
         </Button>
         {/* Button 2 */}
         <Button className="px-4 py-2 rounded" variant="outline">
-          <Link href="/skills">Skills</Link>
+          <Link to="/skills">Skills</Link>
         </Button>
         {/* Button 3 */}
         <Button className="px-4 py-2 rounded" variant="outline">
-          <Link href="/contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </Button>
       </div>
     </div>

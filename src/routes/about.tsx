@@ -3,6 +3,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 
 import {
@@ -21,23 +22,22 @@ export default function About() {
       <p className="text-xl">
         I&apos;m a computer science student based in Santiago, studying at the
         University of Chile. I&apos;m in my final year of studies, and I&apos;m
-        currently working on my thesis. I have a passion for software
-        development, and I&apos;m always looking to learn new things to improve
-        my skills.
+        currently working on my undergrauate thesis. I have a passion for
+        software development, and I&apos;m always looking to learn new things to
+        improve my skills.
       </p>
       <h1 className="text-6xl font-bold mt-8">Experience</h1>
       <hr className="border-t-2 border-gray-300 my-4 w-full" />
       <p className="text-xl">
         I&apos;ve worked as a summer intern for two companies, mainly focused on
         building applications with Python and SQL to automate tasks. I&apos;ve
-        also worked as a teaching assistant for the Databases course at my
-        university.
+        also worked as a teaching assistant for two courses at my university,
       </p>
       <div className="flex flex-col">
         <Accordion type="single" collapsible className="mt-8">
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              <h1 className="text-4xl font-bold">Intern at LVA Indices</h1>
+              <h1 className="text-4xl font-bold">Intern @ LVA Indices</h1>
             </AccordionTrigger>
             <AccordionContent>
               <Card className="mt-6">
@@ -67,14 +67,31 @@ export default function About() {
             <AccordionContent>
               <Card className="mt-6">
                 <CardHeader>
+                  <CardTitle>Data Privacy Teaching Assistant</CardTitle>
+                  <CardDescription>March 2024 - present</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Currently working as a teaching assistant for the Data
+                    Privacy course at the University of Chile. The course is
+                    focused on differential privacy techniques, and I'm in
+                    charge of helping students with their assignments and
+                    grading them.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="mt-6">
+                <CardHeader>
+                  <CardTitle>Databases Teaching Assistant</CardTitle>
                   <CardDescription>August 2022 - December 2022</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p>
                     Worked with a team of teaching assistants for the Databases
-                    course at the University of Chile. I was in charge of
-                    helping around 200 students with their assignments, and
-                    grading them.
+                    course at the University of Chile. This course covers topics
+                    such as Entity Relationship Diagrams, Relational Algebra and
+                    SQL, using PostgreSQL. I was in charge of helping students
+                    with their assignments and grading them.
                   </p>
                 </CardContent>
               </Card>
@@ -82,7 +99,7 @@ export default function About() {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>
-              <h1 className="text-4xl font-bold">Intern at Vantrust Capital</h1>
+              <h1 className="text-4xl font-bold">Intern @ Vantrust Capital</h1>
             </AccordionTrigger>
             <AccordionContent>
               <Card className="mt-6">
