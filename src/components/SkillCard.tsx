@@ -1,0 +1,59 @@
+import React from "react";
+import { useTheme } from "@/components/theme-provider";
+
+// Define a type for sub-skill
+interface SubSkill {
+  name: string;
+  svg: string;
+}
+
+// Define a type for SkillCard props
+interface SkillCardProps {
+  skillName: string;
+  svgPath: string;
+  subSkills?: SubSkill[];
+}
+
+const SkillCard: React.FC<SkillCardProps> = ({
+  skillName,
+  svgPath,
+  subSkills,
+}) => {
+  const { theme } = useTheme();
+
+  // Determine border style based on theme
+  const borderStyle = theme === "dark" ? "border-gray-300" : "border-gray-700";
+
+  return (
+    <div
+      className={`flex flex-col items-center rounded-lg shadow-md p-4 w-full md:w-64 border-2 ${borderStyle}`}
+    >
+      <img
+        src={svgPath}
+        alt={skillName}
+        width={48}
+        height={48}
+        className="dark:filter dark:invert"
+      />
+      <h2 className="mt-2 text-lg font-semibold">{skillName}</h2>
+      {subSkills && (
+        <div className="mt-4">
+          {subSkills.map((subSkill, index) => (
+            <div key={index} className="mt-2 flex items-center">
+              <img
+                src={subSkill.svg}
+                alt={subSkill.name}
+                width={24}
+                height={24}
+                className="dark:filter dark:invert"
+              />
+              <span className="ml-2 text-sm">{subSkill.name}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SkillCard;
