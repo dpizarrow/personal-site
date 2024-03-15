@@ -1,30 +1,15 @@
-# React + TypeScript + Vite
+# 🚀 My Personal Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the repository for my personal site. I am using this site to show my skills, experience, and projects. I am also using this site to learn about web development and to experiment with new technologies. This site is a work in progress and I will be updating it regularly.
 
-Currently, two official plugins are available:
+## 🖥️ Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite**: Build tool for a more modern web development workflow.
 
-## Expanding the ESLint configuration
+- **React + TypeScript**: Frontend framework and language. TypeScript is used to catch errors early and help with code quality.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Tailwind CSS**: Utility-first CSS framework for quickly building custom designs.
 
-- Configure the top-level `parserOptions` property like this:
+## 🌐 Deployment
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This site is deployed using Vercel, a quick and easy way to deploy web applications.
